@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script src="https://rawgit.com/aframevr/aframe/0253403/dist/aframe-master.min.js"></script>
+		<script src="animation.js"></script>
+	</head>
+	<body>
+		<a-scene id="scene">
+			<a-assets>
+				<a-asset-item id="keukenObj" src="models/keuken.obj"></a-asset-item>
+				<a-asset-item id="keukenMtl" src="models/keuken.mtl"></a-asset-item>
+				
+			</a-assets>
+			<a-entity obj-model="obj:#keukenObj;mtl:#keukenMtl"
+			position="0 0 0"
+			scale="1.5 1.5 1.5">
+			</a-entity>
+
+			<a-entity id="geluidMes"> 
+				<audio id="knifeStabSound" src="http://infobol.nl/geluidseffecten/knifeSharp.ogg"></audio>
+			</a-entity>
+
+			<a-entity id="geluidSnijden"> 
+				<audio id="snijden" src="sounds/snijden.mp3" ></audio>
+			</a-entity>
+
+			<a-entity id="fornuisLighter"> 
+				<audio id="stoveLighter" src="sounds/fornuis.ogg"></audio>
+			</a-entity>
+
+			<a-entity id="wortelsSnijden"> 
+				<audio id="carretCutting" src="sounds/wortelsSnijden.ogg"></audio>
+			</a-entity>
+			<a-entity id="knife" obj-model="obj:models/knife.obj;mtl:models/knife.mtl" scale="0.5 0.5 0.5" position="-0.579 -0.12854355915545926 -0.25" rotation="-90 45 0">
+				<a-animation attribute="position" to="0.5 1 -2" from="0.5 -0.25 -1" dur="500" repeat="1" direction="alternate" begin="STEEK">
+				</a-animation>
+				<a-animation attribute="rotation" from="0 90 0" to="0 90 90" begin="STEEK" dur="500" repeat="1" direction="alternate">
+				</a-animation>
+			</a-entity>
+			<a-box id="cutting-board" color="brown" material="" geometry="" scale="0.72 -0.03 0.47" position="1.1550822473012297 -0.12956531152371725 -0.382"></a-box>
+			<a-box id="wasbak" color="aqua" material="" geometry="" scale="0.3 -0.03 0.26" position="0.058841026777059435 -0.13 -0.2846700143678905"></a-box>
+			<a-entity id="rice" visible="false" obj-model="obj:models/rice.obj;mtl:models/rice.mtl" scale="0.83 0.77 0.71" position="-0.7602628370762586 -0.0913900262007435 0.35267154094972786" rotation="0.476 -158.604 1.7">
+				<a-animation attribute="position" to="0.5 1 -2" from="0.5 -0.25 -1" dur="500" repeat="1" direction="alternate" begin="STEEK">
+				</a-animation>
+				<a-animation attribute="rotation" from="0 90 0" to="0 90 90" begin="STEEK" dur="500" repeat="1" direction="alternate">
+				</a-animation>
+			</a-entity>
+			<a-entity id="arrow" obj-model="obj:models/arrow.obj;mtl:models/arrow.mtl" scale="0.59 0.48 0.45" position="-0.5149797559027911 0.20701308297604568 -0.285648603183163" rotation="99.74 91.27 6.829999999999996">
+				<a-animation attribute="position" to="0.5 1 -2" from="0.5 -0.25 -1" dur="500" repeat="1" direction="alternate" begin="STEEK">
+				</a-animation>
+				<a-animation attribute="rotation" from="0 90 0" to="0 90 90" begin="STEEK" dur="500" repeat="1" direction="alternate">
+				</a-animation>
+			</a-entity>
+			<a-entity id="meat"  visible="false" obj-model="obj:models/meat.obj;mtl:models/meat.mtl" scale="0.11 0.1 0.08" position="0.12698914128673972 -0.1408522825061036 0.9501981271626658" rotation="2.646 -158.284 0.859999999999999">
+				<a-animation attribute="position" to="0.5 1 -2" from="0.5 -0.25 -1" dur="500" repeat="1" direction="alternate" begin="STEEK">
+				</a-animation>
+				<a-animation attribute="rotation" from="0 90 0" to="0 90 90" begin="STEEK" dur="500" repeat="1" direction="alternate">
+				</a-animation>
+			</a-entity>
+			<a-entity id="panWithFood" visible="false" obj-model="obj:models/panWithFood.obj;mtl:models/panWithFood.mtl" scale="0.19 0.26 0.21000000000000002" position="0.3538780366921267 -0.09069979795072325 -0.21266156970290195" rotation="5.655999999999999 -157.184 -3.3400000000000016">
+				<a-animation attribute="position" to="0.5 1 -2" from="0.5 -0.25 -1" dur="500" repeat="1" direction="alternate" begin="STEEK">
+				</a-animation>
+				<a-animation attribute="rotation" from="0 90 0" to="0 90 90" begin="STEEK" dur="500" repeat="1" direction="alternate">
+				</a-animation>
+			</a-entity>
+			<a-entity id="saltAndPepper" visible="false" obj-model="obj:models/saltAndPepper.obj;mtl:models/saltAndPepper.mtl" scale="0.03 0.02 0.04" position="-0.8273545556452664 -0.141 0.6225338670709059" rotation="0.196 -179.764 0.4">
+				<a-animation attribute="position" to="0.5 1 -2" from="0.5 -0.25 -1" dur="500" repeat="1" direction="alternate" begin="STEEK">
+				</a-animation>
+				<a-animation attribute="rotation" from="0 90 0" to="0 90 90" begin="STEEK" dur="500" repeat="1" direction="alternate">
+				</a-animation>
+			</a-entity>
+			<a-entity id="onion" visible="false" obj-model="obj:models/onion.obj;mtl:models/onion.mtl" scale="0.49000000000000005 0.52 0.58" position="0.32189313220915966 -0.1348798653062989 0.9811432463193617" rotation="0.196 -179.764 0.4">
+				<a-animation attribute="position" to="0.5 1 -2" from="0.5 -0.25 -1" dur="500" repeat="1" direction="alternate" begin="STEEK">
+				</a-animation>
+				<a-animation attribute="rotation" from="0 90 0" to="0 90 90" begin="STEEK" dur="500" repeat="1" direction="alternate">
+				</a-animation>
+			</a-entity>
+			<a-entity id="potato" visible="false" obj-model="obj:models/potato.obj;mtl:models/potato.mtl" scale="0.13 0.1 0.18" position="-0.044 -0.13627920327856077 0.654" rotation="0.196 -179.764 0.4">
+				<a-animation attribute="position" to="0.5 1 -2" from="0.5 -0.25 -1" dur="500" repeat="1" direction="alternate" begin="STEEK">
+				</a-animation>
+				<a-animation attribute="rotation" from="0 90 0" to="0 90 90" begin="STEEK" dur="500" repeat="1" direction="alternate">
+				</a-animation>
+			</a-entity>
+			<a-entity id="pan" visible="false" obj-model="obj:models/pan.obj;mtl:models/pan.mtl" scale="0.33999999999999997 0.16 0.31" position="-0.7970840202802978 -0.12515673543595512 0.5599544188886347" rotation="1.7164387347811614 -158.67393120410875 -0.0500587656615516">
+				<a-animation attribute="position" to="0.5 1 -2" from="0.5 -0.25 -1" dur="500" repeat="1" direction="alternate" begin="STEEK">
+				</a-animation>
+				<a-animation attribute="rotation" from="0 90 0" to="0 90 90" begin="STEEK" dur="500" repeat="1" direction="alternate">
+				</a-animation>
+			</a-entity>
+			<a-entity id="bowlWithVegetables" visible="false" obj-model="obj:models/bowlWithVegetables.obj;mtl:models/bowlWithVegetables.mtl" scale="0.34 0.16 0.31" position="-0.08528569435155688 -0.13914078574044234 1.007328984313644" rotation="1.716 -158.674 -0.05">
+				<a-animation attribute="position" to="0.5 1 -2" from="0.5 -0.25 -1" dur="500" repeat="1" direction="alternate" begin="STEEK">
+				</a-animation>
+				<a-animation attribute="rotation" from="0 90 0" to="0 90 90" begin="STEEK" dur="500" repeat="1" direction="alternate">
+				</a-animation>
+			</a-entity>
+			<a-entity id="carrot" visible="false" obj-model="obj:models/carrot.obj;mtl:models/carrot.mtl" scale="0.04 0.06 0.05" position="0.177 -0.133 0.632" rotation="82.3 -181.294 -63.75000000000001">
+				<a-animation attribute="position" to="0.5 1 -2" from="0.5 -0.25 -1" dur="500" repeat="1" direction="alternate" begin="STEEK">
+				</a-animation>
+				<a-animation attribute="rotation" from="0 90 0" to="0 90 90" begin="STEEK" dur="500" repeat="1" direction="alternate">
+				</a-animation>
+			</a-entity>
+			<a-entity id="rijstPan" visible="false" obj-model="obj:models/panRijst.obj;mtl:models/panRijst.mtl" scale="0.05 0.04 0.05" position="-0.953 -0.147 0.106" rotation="0 300 0">
+				<a-animation attribute="position" to="0.5 1 -2" from="0.5 -0.25 -1" dur="500" repeat="1" direction="alternate" begin="STEEK">
+				</a-animation>
+				<a-animation attribute="rotation" from="0 90 0" to="0 90 90" begin="STEEK" dur="500" repeat="1" direction="alternate">
+				</a-animation>
+			</a-entity>
+			<a-entity id="qabuli" visible="false" obj-model="obj:models/qabuli.obj;mtl:models/qabuli.mtl" scale="0.9400000000000001 1.1900000000000002 0.8200000000000001" position="0.2861348826552137 -0.08856827076881131 0.852328523251623" rotation="0 300 0">
+				<a-animation attribute="position" to="0.5 1 -2" from="0.5 -0.25 -1" dur="500" repeat="1" direction="alternate" begin="STEEK">
+				</a-animation>
+				<a-animation attribute="rotation" from="0 90 0" to="0 90 90" begin="STEEK" dur="500" repeat="1" direction="alternate">
+				</a-animation>
+			</a-entity>
+			<a-entity id="waterBottle" visible="false" obj-model="obj:models/water.obj;mtl:models/water.mtl" scale="0.05 0.04 0.05" position="-0.8637444207403566 -0.146 0.5472933593278215" rotation="0 300 0">
+				<a-animation attribute="position" to="0.5 1 -2" from="0.5 -0.25 -1" dur="500" repeat="1" direction="alternate" begin="STEEK">
+				</a-animation>
+				<a-animation attribute="rotation" from="0 90 0" to="0 90 90" begin="STEEK" dur="500" repeat="1" direction="alternate">
+				</a-animation>
+			</a-entity>
+			<a-entity id="steakBord" visible="false" obj-model="obj:models/steakBord.obj;mtl:models/steakBord.mtl" scale="0.24 0.59 0.2" position="0.12940105325400011 -0.115 1.01380548811425" rotation="110.83000000000001 -157.864 -125.88000000000001">
+				<a-animation attribute="position" to="0.5 1 -2" from="0.5 -0.25 -1" dur="500" repeat="1" direction="alternate" begin="STEEK">
+				</a-animation>
+				<a-animation attribute="rotation" from="0 90 0" to="0 90 90" begin="STEEK" dur="500" repeat="1" direction="alternate">
+				</a-animation>
+			</a-entity>
+			<a-entity id="butter" visible="false" obj-model="obj:models/butter.obj;mtl:models/butter.mtl" scale="0.24 0.59 0.2" position="0.129 -0.1285004863168444 0.7734886063241833" rotation="-175.09000000000003 -176.784 -190.57">
+				<a-animation attribute="position" to="0.5 1 -2" from="0.5 -0.25 -1" dur="500" repeat="1" direction="alternate" begin="butter">
+				</a-animation>
+				<a-animation attribute="rotation" from="0 90 0" to="0 90 90" begin="STEEK" dur="500" repeat="1" direction="alternate">
+				</a-animation>
+			</a-entity>
+			<a-entity id="cookedmeat" visible="false" obj-model="obj:models/cookedmeat.obj;mtl:models/cookedmeat.mtl" scale="0.24 0.59 0.2" position="0.33 -0.08939014373285165 -0.21736257775206022" rotation="-498.88 -254.16400000000002 -303.37">
+				<a-animation attribute="position" to="0.5 1 -2" from="0.5 -0.25 -1" dur="500" repeat="1" direction="alternate" begin="butter">
+				</a-animation>
+				<a-animation attribute="rotation" from="0 90 0" to="0 90 90" begin="STEEK" dur="500" repeat="1" direction="alternate">
+				</a-animation>
+			</a-entity>
+			<a-entity id="leegBord" visible="false" obj-model="obj:models/leegbord.obj;mtl:models/leegbord.mtl" scale="0.99 1.3599999999999999 1.0999999999999999" position="-0.8674432057277346 -0.11779963297871568 0.25204042621000305" rotation="-721.5500000000002 -259.914 -362.2">
+				<a-animation attribute="position" to="0.5 1 -2" from="0.5 -0.25 -1" dur="500" repeat="1" direction="alternate" begin="butter">
+				</a-animation>
+				<a-animation attribute="rotation" from="0 90 0" to="0 90 90" begin="STEEK" dur="500" repeat="1" direction="alternate">
+				</a-animation>
+			</a-entity>
+			<a-entity id="roeren" visible="false" obj-model="obj:models/roeren.obj;mtl:models/roeren.mtl" scale="0.009999999999999981 -0.01 0.01" position="-0.8977463779722931 -0.12778933634681627 -0.3831739423402106" rotation="-713.6800000000002 -267.08400000000006 -359.82">
+				<a-animation attribute="position" to="0.5 1 -2" from="0.5 -0.25 -1" dur="500" repeat="1" direction="alternate" begin="butter">
+				</a-animation>
+				<a-animation attribute="rotation" from="0 90 0" to="0 90 90" begin="STEEK" dur="500" repeat="1" direction="alternate">
+				</a-animation>
+			</a-entity>
+
+			<a-entity id="rijstGemaakt" visible="false" obj-model="obj:models/mesh.obj;mtl:models/mesh.mtl" scale="0.009999999999999981 -0.01 0.01" position="-0.8977463779722931 -0.12778933634681627 -0.3831739423402106" rotation="-713.6800000000002 -267.08400000000006 -359.82">
+				<a-animation attribute="position" to="0.5 1 -2" from="0.5 -0.25 -1" dur="500" repeat="1" direction="alternate" begin="butter">
+				</a-animation>
+				<a-animation attribute="rotation" from="0 90 0" to="0 90 90" begin="STEEK" dur="500" repeat="1" direction="alternate">
+				</a-animation>
+			</a-entity>
+
+			<a-sphere id="gesmoltenBoter" visible="false" position="0.3483248597832812 -0.0928543497182448 -0.2253753795328176" radius="1.25" color="#ffff91" material="" geometry="" rotation="0.16 -4.67 0" scale="0.08 -0.01 0.07"></a-sphere>
+			<a-box id="stappenplan" src="./models/stappenplan.png" material="" geometry="" scale="0.22 2.99 3.23" position="3.4091505197707295 0.200098204730987 0.4684904447145516"></a-box>
+			<a-text id="txtRijst" visible="false" value="Laat de rijst 30 min koken. " text="value:Laat de rijst 30 min koken.;color:#000000" position="0.005382938579117202 0.258 -0.34" color="black" visible="" scale="0.59 1.01 0.61"></a-text>			
+			<a-text id="txtMeat" visible="false" value="Laat het vlees 15 min koken. " text="value:Laat het vlees 15 min koken.;color:#000000" position="-0.4522227838232131 0.258 -0.34" color="black" scale="0.59 1.01 0.61"></a-text>			<a-entity position="0 -1.2 1.8">
+			  <a-camera id="camera" >
+			  	<a-cursor color="blue"></a-cursor>
+			  </a-camera>
+			</a-entity>
+			<a-sky color="models/A5FFFF"></a-sky>
+		</a-scene>
+	</body>
+</html>
